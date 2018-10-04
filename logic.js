@@ -2,7 +2,7 @@
 // Make sure to match the configuration to the script version number in the HTML
 // (Ex. 3.0 != 3.7.0)
 var config = {
-    apiKey: "AIzaSyCschy6LFjNRomNiiZhjWYzif_T0tFEM-w",
+    apiKey: config.MY_KEY,
     authDomain: "jobi-project-2.firebaseapp.com",
     databaseURL: "https://jobi-project-2.firebaseio.com",
     projectId: "jobi-project-2",
@@ -35,7 +35,7 @@ database.ref().on("value", function(snapshot) {
 
 
     // Change the HTML to reflect the stored values
-    $("#highest-price").html(highPrice);
+    $("#highest-price").html("$" + highPrice);
     $("#highest-bidder").html(highBidder);
 
     // Print the data to the console.
